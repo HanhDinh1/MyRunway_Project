@@ -19,9 +19,9 @@ const userSchema = new Schema(
     passwordHash: {
       type: String,
       required: [true, 'Password is required.']
-    }
+    },
 
-    // imageArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}]
+    outfitArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}]
   },
   {
     timestamps: true

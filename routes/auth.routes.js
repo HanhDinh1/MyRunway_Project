@@ -39,12 +39,21 @@ router.get('/login', (req, res) => res.render('auth/login'));
     .catch(error => next(error));
 });
 
-router.get('/userProfile', (req, res) => res.render('users/user-profile'));
+router.get('/userProfile', (req, res) => {
+  User.findById(req.session.currentUser._id)
+  .populate('outfitArray')
+    .then((myUser) =>{
+      console.log(myUser);
+      res.render('users/user-profile', {userInsession: myUser});
+    })
+    .catch(error => res.send(error));
+});
 
 // GET route ==> to display the login form to users
 router.get('/login', (req, res) => res.render('auth/login'));
 
 router.post('/login', (req, res, next) => {
+  console.log('SESSION ===>', req.session);
   const { email, password } = req.body;
  
   if (email === '' || password === '') {

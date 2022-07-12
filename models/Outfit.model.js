@@ -14,6 +14,4 @@ const outfitSchema = new Schema(
   }
 );
 
-// const Post = models('Outfit', outfitSchema)
-
 module.exports = model('Outfit', outfitSchema);

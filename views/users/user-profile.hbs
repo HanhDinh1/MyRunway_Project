@@ -1,1 +1,7 @@
 <p>This is your profile page!</p>
+
+{{#each userInSession.outfitArray}}
+<div>
+    <img src="{{this.imageUrl}}"/>
+</div>
+{{/each}}
