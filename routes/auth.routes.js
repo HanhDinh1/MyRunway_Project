@@ -6,12 +6,15 @@ const User = require('../models/User.model');
 // const { isLoggedIn, isLoggedOut } = require('../middleware/rout-guard.js');
 
 /* GET home page */
+router.get('/index', (req, res) => {
+  res.render('index.hbs')
+});
+
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup.hbs");
 });
 
 router.post('/signup', (req, res, next) => {
-  // console.log("The form data: ", req.body);
 
   // GET route ==> to display the login form to users
 router.get('/login', (req, res) => res.render('auth/login'));

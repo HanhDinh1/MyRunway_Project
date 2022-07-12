@@ -1,0 +1,1 @@
+//router.get('post/create', isLoggedIn, (req, res) => res.render())

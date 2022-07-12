@@ -20,6 +20,8 @@ const userSchema = new Schema(
       type: String,
       required: [true, 'Password is required.']
     }
+
+    // imageArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}]
   },
   {
     timestamps: true
