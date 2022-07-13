@@ -2,6 +2,8 @@
 
 // require session
 const session = require('express-session');
+const MongoStore = require('connect-mongo')
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/MyRunway";
 
 // since we are going to USE this middleware in the app.js,
 // let's export it and have it receive a parameter
@@ -23,8 +25,9 @@ module.exports = app => {
         sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
-        maxAge: 60000 // 60 * 1000 ms === 1 min
-      }
+        maxAge: 3600000 // 60 * 1000 ms === 1 hour
+      },
+      store: MongoStore.create({ mongoUrl: MONGO_URI })
     })
   );
 };

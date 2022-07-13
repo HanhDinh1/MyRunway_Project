@@ -55,7 +55,7 @@ body{
   }
    
   .error {
-    background: #f02b63;
+    background: #7D1E6A;
     box-sizing: border-box;
     color: #fff;
     margin: 20px auto;
@@ -77,7 +77,9 @@ body{
   }
   /* signup/login end*/
 
-  
+  .tittle-h1{
+    text-shadow: #C689C6 4px -10px 4px;
+  }
   .title{
     color:#7D1E6A;
   }
@@ -86,7 +88,6 @@ body{
     font-size: 3.5rem;
     line-height: 1.5;
     font-weight: 900;
-    text-shadow: #C689C6 4px -10px 4px;
     text-align: center;
   }
   p{
@@ -111,9 +112,9 @@ body{
   .main-page{
     margin-top: 60px;
   }
-.main-p{
+/* .main-p{
     text-shadow: #C689C6 2px -3px 2px;
-}
+} */
   .tittle-image{
     width: 60%;
     transform: rotate(25deg);
@@ -128,4 +129,16 @@ body{
   }
   .container-fluid{
     padding: 3% 12% 7%;
+  }
+  /* .profile{
+    background-color: #7D1E6A;
+  } */
+
+  .outfit-array{
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .outfit-images{
+    margin: 20px 20px 50px;
   }

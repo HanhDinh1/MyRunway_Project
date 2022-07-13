@@ -20,11 +20,17 @@ const userSchema = new Schema(
       type: String,
       required: [true, 'Password is required.']
     },
+    about: {
+      type: String,
+    },
+    profileImage:{
+      type: String,
+    },
 
-    outfitArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}]
+    outfitArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}],
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 );
 

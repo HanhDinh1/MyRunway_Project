@@ -1,0 +1,27 @@
+<section>
+
+<div>
+<h2>Edit {{userInSession.username}}'s information</h2>
+
+<form action="/userprofile/edit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+
+        <label>About you:
+          <input type="text" name="about" class="form-control" />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>Your profile picture:
+          <input type="file" name="profileImage" class="form-control-file" />
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save changes</button>
+
+</form>
+
+</div>
+
+</section>

@@ -1,5 +1,6 @@
 // routes/outfit.routes.js
 
+const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 
@@ -12,20 +13,32 @@ const User = require('../models/User.model');
 router.get('/outfit/create', (req, res) => res.render('outfit/create-outfit.hbs'));
 
 router.post('/outfit/create', fileUploader.single('outfit-image'), (req, res) => {
-    const { title } = req.body.title;
+  
+    const { title } = req.body;
    
    Outfit.create({ title, imageUrl: req.file.path, userId:req.session.currentUser._id })
       .then(newOutfit => {
+        
         console.log(newOutfit);
         // res.send('ok')
+        // res.render('outfit/create-outfit')
         User.findByIdAndUpdate(req.session.currentUser._id,{
           $push:{outfitArray:newOutfit._id}}, {new: true})
       .then((response) =>{
         console.log(response)
+        res.redirect ('/userprofile')
       })
-      res.redirect ('/user-profile')
+     
       })
-      .catch(error => console.log(`Error while creating a new movie: ${error}`));
+      .catch(error => console.log(`Error while creating a new outfit: ${error}`));
   });
+
+  // router.get('/outfit', (req, res) => {
+  //   outfit.find()
+  //   .then(outfitFromDB =>{
+  //     res.render('outfit/outfit-list', {outfit: outfitFromDB});
+  //   })
+  //   .catch(error => console.log (`Error while getting outfit: ${error}`))
+  // })
 
 module.exports = router;

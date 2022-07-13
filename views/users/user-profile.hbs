@@ -1,7 +1,39 @@
-<p>This is your profile page!</p>
+<section class = "container-fluid profile">
+
+<h2>Your profile</h2>
+
+<img src="{{userInSession.profileImage}}" alt="" height="100px">
+<p>{{userInSession.about}}</p>
+
+<a href="/userprofile/edit">Edit Profile</a>
+
+{{!-- <div class="row">
+  <div class="col-md-6">
+    <form action="/userprofile" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Describtion
+          <input type="text" name="title" class="form-control" />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>Outfit Image:
+          <input type="file" name="outfitImage" class="form-control-file" />
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+</div> --}}
 
 {{#each userInSession.outfitArray}}
-<div>
-    <img src="{{this.imageUrl}}"/>
+<div class="outfit-array ">
+    <div class ="outfit-images">
+    <h2>{{this.title}}</h2>
+    <img class ="outfit-images col-lg-4 col-md-6" src="{{this.imageUrl}}"/>  
+    </div>
 </div>
 {{/each}}
+
+</section>
