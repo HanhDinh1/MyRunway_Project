@@ -57,9 +57,9 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
 
 //all post on home page
 // router.get("/", (req, res) => {
-//   Posts.find()
+//   Outfit.find()
 //     .then((allOutfits) => {
-//       allPosts.reverse();
+//       allOutfits.reverse();
 //       res.render("index", {allOutfits});
 //     })
 //     .catch((err) => res.send(err));

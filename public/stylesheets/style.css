@@ -75,8 +75,7 @@ body{
   #logout-form button {
     width: 120px;
   }
-  /* signup/login end*/
-
+   /* signup/login end*/
   .tittle-h1{
     text-shadow: #C689C6 4px -10px 4px;
   }
@@ -113,7 +112,7 @@ body{
     margin-top: 60px;
   }
 /* .main-p{
-    text-shadow: #C689C6 2px -3px 2px;
+    color: #F15412
 } */
   .tittle-image{
     width: 60%;
@@ -126,6 +125,12 @@ body{
     font-size: 2.5rem;
     font-weight: bold;
     color:#fff;
+  }
+  .nav-item{
+    padding: 0 18px;
+  }
+  .nar-item.hover{
+    color: white;
   }
   .container-fluid{
     padding: 3% 12% 7%;
@@ -142,3 +147,71 @@ body{
   .outfit-images{
     margin: 20px 20px 50px;
   }
+
+  /* feature  */
+  #features{
+    padding: 3% 15%;
+    background-color: #FEE3EC;
+    position: relative;
+  }
+  .feature-box{
+    text-align: center;
+    padding: 4.5%;
+  }
+  .icon{
+    color: #7D1E6A;
+    margin-bottom: 1rem;
+  }
+  .icon:hover{
+    color:#F05454;
+  }
+ 
+  /* testimonial section */
+  #testimonials{
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #C689C6;
+  color: #fff;
+}
+
+.testimonial-image{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item{
+  padding: 7% 15%;
+}
+
+#press{
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 3%;
+}
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* footer  */
+.bottom-container {
+  text-align: center;
+  background-color: #8F4068;
+  padding: 40px 0 20px;
+}
+.copyright{
+  color: #FFEEEE;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+.footer-link{
+  
+  color: #C689C6;
+  font-family: 'Merriweather', serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+.footer-link:hover{
+  color: #FFEEEE;
+}
