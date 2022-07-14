@@ -25,6 +25,16 @@ const projectName = "MyRunway";
 
 app.locals.appTitle = `${capitalized(projectName)} created by Hanh Dinh`;
 
+app.use((req, res, next) => {
+    if(req.session.currentUser === undefined){
+        app.set("view options", {layout:'loggedout-layout'} )
+    }
+    else{
+        app.set("view options", {layout:'loggedin-layout'})
+    }
+    next();
+})
+
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
 app.use("/", index);

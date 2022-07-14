@@ -190,8 +190,8 @@ body{
   padding-bottom: 3%;
 }
 .press-logo{
-  width: 15%;
-  margin: 20px 20px 50px;
+  width: 7%;
+  margin: 20px 20px 20px;
 }
 
 /* footer  */
@@ -215,3 +215,45 @@ body{
 .footer-link:hover{
   color: #FFEEEE;
 }
+/* user profile */
+.top-user-profile{
+  background-image: url("../images/userBackground1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile-pic{
+  margin-top: 80px;
+}
+button:hover {
+  background: #fff;
+  color: #5D5D5D;
+  transition: 0.3s ease background;
+}
+.edit-profile{
+  text-align: center;
+  margin: 50px 0 50px;
+}
+.user-appearance{
+  display: flex;
+  flex-direction: row;
+}
+.about{
+margin-top: 120px;
+margin-left: 200px;
+text-align: center;
+}
+.edit-button{
+font-size: 40px;
+}
+/* alloutfits */
+
+.allOutfits-section{
+margin: 50px;
+}
+.hidden{
+  display: none;
+}
+
+/* .allOutfits{
+  height: 300px;
+} */

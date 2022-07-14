@@ -7,7 +7,7 @@ const {isLoggedIn, isLoggedOut} = require('../middleware/route-guard')
 
 const fileUploader = require('../config/cloudinary.config');
 
-const Outfit = require('../models/Outfit.model');
+const Outfit = require('../models/Outfit.model.js');
 
 /* GET home page */
 router.get('/index', (req, res) => {
@@ -56,14 +56,15 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
 });
 
 //all post on home page
-// router.get("/", (req, res) => {
-//   Outfit.find()
-//     .then((allOutfits) => {
-//       allOutfits.reverse();
-//       res.render("index", {allOutfits});
-//     })
-//     .catch((err) => res.send(err));
-// });
+router.get("/allOutfits", (req, res) => {
+  Outfit.find()
+    .then((allOutfits) => {
+      allOutfits.reverse();
+      console.log(allOutfits)
+      res.render("outfits-page", {allOutfits});
+    })
+    .catch((err) => res.send(err));
+});
 
 
 

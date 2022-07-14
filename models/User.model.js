@@ -29,6 +29,8 @@ const userSchema = new Schema(
 
     outfitArray: [{type:Schema.Types.ObjectId, ref:'Outfit'}],
   },
+    
+
   {
     timestamps: true,
   }

@@ -33,12 +33,19 @@ router.post('/outfit/create', fileUploader.single('outfit-image'), (req, res) =>
       .catch(error => console.log(`Error while creating a new outfit: ${error}`));
   });
 
-  // router.get('/outfit', (req, res) => {
-  //   outfit.find()
-  //   .then(outfitFromDB =>{
-  //     res.render('outfit/outfit-list', {outfit: outfitFromDB});
-  //   })
-  //   .catch(error => console.log (`Error while getting outfit: ${error}`))
-  // })
+  //delete
+  router.get('/outfits/:id/delete', (req, res) => {
+    const { id } = req.params;
+
+    Outfit.findByIdAndDelete(id)
+    .then((response) =>{
+      res.redirect("/userprofile")
+      console.log(response) 
+    
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
 
 module.exports = router;

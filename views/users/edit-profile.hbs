@@ -1,7 +1,9 @@
 <section>
 
 <div>
-<h2>Edit {{userInSession.username}}'s information</h2>
+  <div class="edit-profile">
+<h2 >Edit {{userInSession.username}}'s information</h2>
+  </div>
 
 <form action="/userprofile/edit" method="post" enctype="multipart/form-data">
 
@@ -10,6 +12,7 @@
         <label>About you:
           <input type="text" name="about" class="form-control" />
         </label>
+        
       </div>
 
       <div class="form-group">
@@ -18,7 +21,7 @@
         </label>
       </div>
 
-      <button type="submit" class="btn btn-primary">Save changes</button>
+      <button type="submit" class="button btn btn-secondary">Save changes</button>
 
 </form>
 

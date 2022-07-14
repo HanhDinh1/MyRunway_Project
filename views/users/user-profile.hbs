@@ -1,31 +1,25 @@
-<section class = "container-fluid profile">
+<section class = "container-fluid profile top-user-profile">
 
-<h2>Your profile</h2>
-
-<img src="{{userInSession.profileImage}}" alt="" height="400px">
-<p>{{userInSession.about}}</p>
-
-<a href="/userprofile/edit">Edit Profile</a>
-
-{{!-- <div class="row">
-  <div class="col-md-6">
-    <form action="/userprofile" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label>Describtion
-          <input type="text" name="title" class="form-control" />
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>Outfit Image:
-          <input type="file" name="outfitImage" class="form-control-file" />
-        </label>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
+<div class="user-appearance">
+  <div>
+    <img class ="profile-pic" src="{{userInSession.profileImage}}" alt="" height="350px">
+    
   </div>
-</div> --}}
+  <div class ="about">
+    <div>
+      <h2>{{userInSession.username}}</h2>
+    </div>
+    <div>
+      <p>{{userInSession.about}}</p>
+    </div>
+  </div>
+</div>
+<a class="edit-button" href="/userprofile/edit">Edit Profile</a>
+</section>
+
+<section>
+<div class ="bottom-user-profile">
+<a href="/outfit/create">Upload more outfits</a>
 
 {{#each userInSession.outfitArray}}
 <div class="outfit-array ">
@@ -33,7 +27,12 @@
     <h2>{{this.title}}</h2>
     <img class ="outfit-images col-lg-4 col-md-6" src="{{this.imageUrl}}"/>  
     </div>
+    <button type="button" class="btn btn-link"><a href="/outfits/{{this._id}}/delete">Delete</a></button>
 </div>
+
 {{/each}}
+</div>
+
+
 
 </section>
