@@ -76,6 +76,15 @@ body{
     width: 120px;
   }
    /* signup/login end*/
+
+/* index */
+.section1{
+  margin-top: 120px;
+}
+.allOutfits-section{
+  margin-top: 140px;
+  text-align: center;
+}
   .tittle-h1{
     text-shadow: #C689C6 4px -10px 4px;
   }
@@ -98,10 +107,19 @@ body{
     webkit-box-shadow: 0 8px 6px -6px #999;
     moz-box-shadow: 0 8px 6px -6px #999;
     background:#C689C6;
+    width: inherit;
+    width: 100vw;
   }
-  .navbar-collapse{
-    margin-lelf: 100%;
+  #navbarResponsive{
+    width: 100vw;
   }
+  .container{
+    padding: 0px;
+    width: 100vw;
+  }
+  /* .navbar-collapse{
+    margin-left: 100%;
+  } */
   .download-button{
     margin: 5% 3% 5% 0;
   }
@@ -245,15 +263,18 @@ text-align: center;
 .edit-button{
 font-size: 40px;
 }
-/* alloutfits */
 
-.allOutfits-section{
-margin: 50px;
-}
 .hidden{
   display: none;
 }
 
 /* .allOutfits{
-  height: 300px;
+  background-color: black;
 } */
+
+@media (max-width:992px) {
+.tittle-image{
+  position: static;
+  transform: rotate (0deg);
+}
+}
